@@ -1,0 +1,36 @@
+{
+    "name": "oslokommune/craft-twig-from-vendor",
+    "description": "Allows including twig files from vendor folder",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "twig from vendor"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Webforvaltningen",
+            "homepage": "https://oslo.kommune.no"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "oslokommune\\twigfromvendor\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Twig from vendor",
+        "handle": "twig-from-vendor",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "???",
+        "class": "oslokommune\\twigfromvendor\\TwigFromVendor"
+    }
+}
