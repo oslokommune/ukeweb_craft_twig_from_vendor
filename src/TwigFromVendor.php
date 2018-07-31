@@ -5,11 +5,10 @@
  * Allows including twig files from vendor folder
  *
  * @link      https://oslo.kommune.no
- * @copyright Copyright (c) 2018 Webforvaltningen
+ * @copyright Copyright (c) 2018 oslo.kommune.no
  */
 
 namespace oslokommune\twigfromvendor;
-
 
 use Craft;
 use craft\base\Plugin;
@@ -20,7 +19,7 @@ use yii\base\Event;
 /**
  * Class TwigFromVendor
  *
- * @author    Webforvaltningen
+ * @author    oslo.kommune.no
  * @package   TwigFromVendor
  * @since     1.0.0
  *
@@ -43,6 +42,11 @@ class TwigFromVendor extends Plugin
      */
     public $schemaVersion = '1.0.0';
 
+    // Protected Properties
+    // =========================================================================
+
+    protected $lsgPath = 'oslokommune/ok-atomic-frontend/src/';
+
     // Public Methods
     // =========================================================================
 
@@ -59,7 +63,10 @@ class TwigFromVendor extends Plugin
             View::EVENT_REGISTER_SITE_TEMPLATE_ROOTS,
             function(craft\events\RegisterTemplateRootsEvent $event) {
                 $event->roots = [
-                    'vendor' => Craft::$app->getPath()->getVendorPath()
+                    'vendor' => Craft::$app->getPath()->getVendorPath(),
+                    'atoms' => Craft::$app->getPath()->getVendorPath() . $this->lsgPath,
+                    'molecules' => Craft::$app->getPath()->getVendorPath() . $this->lsgPath,
+                    'organisms' => Craft::$app->getPath()->getVendorPath() . $this->lsgPath
                 ];
             }
         );
@@ -73,8 +80,4 @@ class TwigFromVendor extends Plugin
             __METHOD__
         );
     }
-
-    // Protected Methods
-    // =========================================================================
-
 }
