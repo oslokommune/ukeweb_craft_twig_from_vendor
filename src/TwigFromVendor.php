@@ -45,7 +45,7 @@ class TwigFromVendor extends Plugin
     // Protected Properties
     // =========================================================================
 
-    protected $lsgPath = 'oslokommune/ok-atomic-frontend/src/';
+    protected $lsgPath = '/oslokommune/ok-atomic-frontend/src/';
 
     // Public Methods
     // =========================================================================
