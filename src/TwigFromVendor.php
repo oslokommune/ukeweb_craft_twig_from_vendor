@@ -64,9 +64,9 @@ class TwigFromVendor extends Plugin
             function(craft\events\RegisterTemplateRootsEvent $event) {
                 $event->roots = [
                     'vendor' => Craft::$app->getPath()->getVendorPath(),
-                    'atoms' => Craft::$app->getPath()->getVendorPath() . $this->lsgPath,
-                    'molecules' => Craft::$app->getPath()->getVendorPath() . $this->lsgPath,
-                    'organisms' => Craft::$app->getPath()->getVendorPath() . $this->lsgPath
+                    'atoms' => Craft::$app->getPath()->getVendorPath() . $this->lsgPath . 'atoms',
+                    'molecules' => Craft::$app->getPath()->getVendorPath() . $this->lsgPath . 'molecules',
+                    'organisms' => Craft::$app->getPath()->getVendorPath() . $this->lsgPath . 'organisms'
                 ];
             }
         );
