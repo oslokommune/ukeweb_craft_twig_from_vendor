@@ -40,12 +40,12 @@ class TwigFromVendor extends Plugin
     /**
      * @var string
      */
-    public $schemaVersion = '1.0.0';
+    public $schemaVersion = '1.0.1';
 
     // Protected Properties
     // =========================================================================
 
-    protected $lsgPath = '/oslokommune/ok-atomic-frontend/src/';
+    protected $lsgPath = '/oslokommune/styleguide/src/';
 
     // Public Methods
     // =========================================================================
